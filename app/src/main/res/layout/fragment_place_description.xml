@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.PlaceDescriptionFragment"
+   android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/placeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scrollbarSize="1dp"
+        android:scrollbars="vertical"
+        android:text="The description"
+        android:textColor="@color/purple_700"
+        android:textSize="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/addToMyPlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/placeDescription"
+        app:layout_constraintStart_toStartOf="@id/placeDescription"
+        android:text="Add to my places"
+        app:layout_constraintBottom_toTopOf="@id/backToMap"
+        app:layout_constraintEnd_toEndOf="@id/placeDescription"/>
+    <Button
+        android:id="@+id/backToMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addToMyPlaces"
+        app:layout_constraintEnd_toEndOf="@id/placeDescription"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/placeDescription"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
