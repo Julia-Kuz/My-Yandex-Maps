@@ -7,4 +7,5 @@ interface PlaceRepository {
     fun getAll(): LiveData<List<Place>>
     suspend fun savePlace (place: Place)
     fun removePlace (place: Place)
+    fun editPlace (place: Place)
 }

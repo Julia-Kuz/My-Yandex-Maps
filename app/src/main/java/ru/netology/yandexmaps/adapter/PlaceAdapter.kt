@@ -11,6 +11,7 @@ import ru.netology.yandexmaps.dto.Place
 
 interface OnInteractionListener {
     fun remove (place: Place)
+    fun edit (place: Place)
     fun goTo (place: Place)
 }
 
@@ -37,11 +38,16 @@ class PlaceViewHolder(
         binding.apply {
             placeName.text = place.name
             remove.setImageResource(R.drawable.ic_cancel_24)
+            edit.setImageResource(R.drawable.ic_edit_24)
+
             remove.setOnClickListener {
                 onInteractionListener.remove(place)
             }
             placeName.setOnClickListener {
                 onInteractionListener.goTo(place)
+            }
+            edit.setOnClickListener {
+                onInteractionListener.edit(place)
             }
         }
     }

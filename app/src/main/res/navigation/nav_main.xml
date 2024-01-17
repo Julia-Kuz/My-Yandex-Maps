@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_placesFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_placesFragment_to_editPlaceFragment"
+            app:destination="@id/editPlaceFragment" />
     </fragment>
     <fragment
         android:id="@+id/placeDescriptionFragment"
@@ -38,6 +41,14 @@
         <action
             android:id="@+id/action_placeDescriptionFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPlaceFragment"
+        android:name="ru.netology.yandexmaps.activity.EditPlaceFragment"
+        android:label="EditPlaceFragment" >
+        <action
+            android:id="@+id/action_editPlaceFragment_to_placesFragment"
+            app:destination="@id/placesFragment" />
     </fragment>
 
 </navigation>

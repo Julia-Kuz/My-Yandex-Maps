@@ -18,4 +18,7 @@ interface PlaceDao {
     @Query("DELETE FROM PlaceEntity WHERE name = :name")
     fun removeByName(name: String)
 
+    @Query("UPDATE PlaceEntity SET name = :name WHERE latitude = :latitude and longitude = :longitude")
+    fun updateName(name: String, latitude: Double, longitude: Double)
+
 }

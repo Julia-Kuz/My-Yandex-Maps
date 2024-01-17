@@ -32,6 +32,11 @@ class PlacesFragment : Fragment() {
                 viewModel.removePlace(place)
             }
 
+            override fun edit(place: Place) {
+                viewModel.placeView = place
+                findNavController().navigate(R.id.action_placesFragment_to_editPlaceFragment)
+            }
+
             override fun goTo(place: Place) {
                 viewModel.position = Point(place.latitude, place.longitude)
                 findNavController().navigate(R.id.action_placesFragment_to_mapsFragment)

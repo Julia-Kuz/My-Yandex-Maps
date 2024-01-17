@@ -24,5 +24,8 @@ class PlaceRepositoryImplementation @Inject constructor(
         place.name?.let { dao.removeByName(it) }
     }
 
+    override fun editPlace(place: Place) {
+        dao.updateName(place.name, place.latitude, place.longitude)
+    }
 
 }

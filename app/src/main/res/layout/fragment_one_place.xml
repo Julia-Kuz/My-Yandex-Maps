@@ -4,11 +4,20 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="start"
+            android:layout_margin="10dp"/>
+
         <TextView
             android:id="@+id/placeName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="10dp"
             android:text="One place fragment"
             android:textSize="20sp"
             android:textColor="@color/purple_700"
@@ -21,7 +30,7 @@
             android:id="@+id/remove"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="10dp"
             android:layout_weight="0.5"
             android:backgroundTint="@color/white"
             android:layout_gravity="end"/>

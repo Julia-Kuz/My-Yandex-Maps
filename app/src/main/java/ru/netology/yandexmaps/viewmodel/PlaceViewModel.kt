@@ -35,6 +35,14 @@ class PlaceViewModel @Inject constructor (
         }
     }
 
+    fun editPlace (place: Place) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                repository.editPlace(place)
+            }
+        }
+    }
+
     var placeView : Place = Place("", 0.0, 0.0)
     val placeName : MutableLiveData <String> by lazy {
         MutableLiveData <String>()
